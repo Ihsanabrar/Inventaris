@@ -1,0 +1,562 @@
+/* Reset dan Font Global */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif; /* Pastikan kamu sudah mengimpor font Roboto atau ganti dengan font lain */
+    background-color: #f4f6f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Sidebar */
+.navbar {
+    background: linear-gradient(180deg, #2c3e50, #34495e);
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    transition: width 0.3s ease;
+}
+
+.navbar:hover {
+    width: 270px;
+}
+
+.navbar-brand {
+    font-size: 30px;
+    color: #ecf0f1;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.navbar-nav {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+.navbar-nav li {
+    width: 100%;
+}
+
+.navbar-nav li a {
+    display: block;
+    width: 100%;
+    padding: 18px 0;
+    text-align: center;
+    color: #bdc3c7;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    transition: background 0.3s, color 0.3s;
+    border-bottom: 1px solid #7f8c8d;
+}
+
+.navbar-nav li a:hover,
+.navbar-nav li a.active {
+    background-color: #34495e;
+    color: #ecf0f1;
+}
+
+/* Area Konten */
+.dashboard-container,
+.container,
+.supplier-container {
+    margin-left: 270px;
+    padding: 40px;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    transition: margin-left 0.3s ease;
+}
+
+/* Summary Cards (Kartu Ringkasan) */
+.summary-cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.summary-card-1 {
+    background: #ceffbb;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+    width: 220px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.summary-card-1:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.summary-card-1 h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.summary-card-1 p {
+    font-size: 16px;
+    color: #295255;
+    margin-bottom: 20px;
+}
+
+.summary-card-1 .icon {
+    font-size: 30px;
+    color: #3498db;
+    margin-bottom: 15px;
+    animation: bounce 1s infinite alternate;
+}
+
+/* Animasi untuk ikon */
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Tabel */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    transition: all 0.3s ease;
+}
+
+table th,
+table td {
+    padding: 18px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table th {
+    background-color: #2980b9;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+table tr:nth-child(even) {
+    background-color: #f8f8f8;
+}
+
+table tr:hover {
+    background-color: #e9ecef;
+}
+
+/* Form */
+.form-tambah {
+    background-color: #ffffff;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.form-tambah:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #2980b9;
+    outline: none;
+}
+
+/* Tombol Umum */
+.btn-simpan,
+.btn-batal,
+.btn-tambah,
+.btn-edit,
+.btn-hapus {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    margin-right: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn-simpan {
+    background-color: #27ae60;
+}
+
+.btn-simpan:hover {
+    background-color: #1e8449;
+    transform: translateY(-2px);
+}
+
+.btn-batal {
+    background-color: #e74c3c;
+}
+
+.btn-batal:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px);
+}
+
+.btn-tambah {
+    background-color: #2980b9;
+    color: #ffffff;
+    border: 2px solid #2980b9;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 16px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.btn-tambah:hover {
+    background-color: #fff;
+    color: #2980b9;
+    border-color: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* Tombol Edit */
+.btn-edit {
+    background-color: #f1c40f;
+    color: #333;
+    border: 2px solid #f1c40f;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 16px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.btn-edit:hover {
+    background-color: #fff;
+    color: #f1c40f;
+    border-color: #f1c40f;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* Tombol Hapus */
+.btn-hapus {
+    background-color: #e67e22;
+    color: #fff;
+    border: 2px solid #e67e22;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 16px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.btn-hapus:hover {
+    background-color: #fff;
+    color: #e67e22;
+    border-color: #e67e22;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+
+/* Dashboard Container */
+.dashboard-container {
+    margin-left: 270px;
+    padding: 40px;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+}
+
+/* Header */
+.dashboard-header {
+    margin-bottom: 40px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.dashboard-header h1 {
+    color: #2c3e50;
+    font-size: 28px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.dashboard-header p {
+    color: #7f8c8d;
+    margin: 5px 0 0;
+    font-size: 16px;
+}
+
+/* Summary Cards */
+.summary-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.summary-card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.summary-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.summary-card .card-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+    color: #3498db;
+}
+
+.summary-card h3 {
+    color: #2c3e50;
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+.summary-card p {
+    color: #2980b9;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.bg-blue {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white;
+}
+
+.bg-blue .card-icon,
+.bg-blue h3,
+.bg-blue p {
+    color: white;
+}
+
+.bg-orange .card-icon,
+.bg-orange h3,
+.bg-orange p {
+    color: white;
+}
+
+.bg-orange {
+    background-color: #ffa500; /* Warna oranye */
+    color: white;
+}
+
+.bg-green {
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+    color: white;
+}
+
+.bg-green .card-icon,
+.bg-green h3,
+.bg-green p {
+    color: white;
+}
+
+/* Activity Section */
+.activity-section {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 30px;
+}
+
+.activity-section h2 {
+    color: #2c3e50;
+    margin-bottom: 25px;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.activity-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.activity-table th {
+    background-color: #2980b9;
+    color: white;
+    padding: 18px;
+    text-align: left;
+    font-weight: 500;
+    border-bottom: 3px solid #2471a3;
+}
+
+.activity-table td {
+    padding: 16px;
+    border-bottom: 1px solid #ecf0f1;
+    color: #2c3e50;
+}
+
+.activity-table tr:hover {
+    background-color: #f8f9fa;
+}
+
+.activity-badge {
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Supplier Page */
+.supplier-table-container {
+    margin-bottom: 20px;
+}
+
+.supplier-table-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.supplier-table-container th,
+.supplier-table-container td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.supplier-form-container {
+    margin-top: 30px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.supplier-form-container form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.supplier-form-container form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.supplier-form-container form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.supplier-form-container form button:hover {
+    background-color: #45a049;
+}
+
+.notification {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px 30px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    z-index: 1000;
+    animation: fadeOut 1.5s ease-out;
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+/* Tambahkan ini ke file style.css */
+.user-table {
+    margin-top: 40px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.user-table th, 
+.user-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.user-table th {
+    background-color: #f8f9fa;
+}
+
+.delete-btn {
+    color: #dc3545;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.delete-btn:hover {
+    background-color: #f8d7da;
+}
